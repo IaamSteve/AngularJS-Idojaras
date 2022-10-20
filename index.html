@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
-    
-</body>
+<html lang="en" ng-app="weatherForecastingApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+
+        <!--Bootstrap css-->
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!--My css-->
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        <div class="container" ng-controller="mainCtrl">
+            <header>
+                <h1>{{title}}</h1>
+            </header>
+            <main>
+                <section>
+                    <h5>Forecast new weather: </h5>
+                <!--<div class="alert alert-danger alert-dismissible fade show" role="alert" ng-show="message != null">
+                        <p class="message">{{message}}</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert">Close</button>
+                    </div>   
+                -->
+                <form action="">
+                    <div class="form-group">
+                        <div class="form-control">
+                            <label class="control-label" for="minimum">Minimum expectable temperature: </label>
+                            <input type="text" class="form-control" id="minimum" name="minimum" ng-model="minimum">
+                        </div>
+                        <div class="form-control">
+                            <label class="control-label" for="maximum">Maximum expectable temperature: </label>
+                            <input type="text" class="form-control" id="maximum" name="maximum" ng-model="maximum">
+                        </div>
+                        <div class="form-control">
+                            <label class="control-label" for="weather"></label>
+                            <select class="form-control" id="weather" name="weather" ng-model="weather">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-1 mb-1" ng-click="addWeather()">Add Weather</button>
+
+                </form>
+            </section>
+            </main>
+            <footer>
+                <h3>{{company}} - {{author}}</h3>
+            </footer>
+        </div>
+
+        <!--Bootstrap js-->
+        <script src="CSS/bootstrap.min.css"></script>
+
+        <!--AngularJS-->
+        <script src="Angular/angular.min.js"></script>
+
+        <!--My Script-->
+        <script src="JS/script.js"></script>
+    </body>
 </html>
