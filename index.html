@@ -25,27 +25,27 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert">Close</button>
                     </div>   
                 -->
-                <form action="">
-                    <div class="form-group">
-                        <div class="form-control">
-                            <label class="control-label" for="minimum">Minimum expectable temperature: </label>
-                            <input type="text" class="form-control" id="minimum" name="minimum" ng-model="minimum">
+                    <!-- <form action=""> -->
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label class="control-label" for="minimum">Minimum expectable temperature: </label>
+                                <input type="text" class="form-control" id="minimum" name="minimum" ng-model="minimum">
+                            </div>
+                            <div class="form-control">
+                                <label class="control-label" for="maximum">Maximum expectable temperature: </label>
+                                <input type="text" class="form-control" id="maximum" name="maximum" ng-model="maximum">
+                            </div>
+                            <div class="form-control">
+                                <label class="control-label" for="weather"></label>
+                                <select class="form-control" id="weather" name="weather" ng-model="weather">
+                                    <option value=""></option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-control">
-                            <label class="control-label" for="maximum">Maximum expectable temperature: </label>
-                            <input type="text" class="form-control" id="maximum" name="maximum" ng-model="maximum">
-                        </div>
-                        <div class="form-control">
-                            <label class="control-label" for="weather"></label>
-                            <select class="form-control" id="weather" name="weather" ng-model="weather">
-                                <option value=""></option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-1 mb-1" ng-click="addWeather()">Add Weather</button>
+                        <button type="submit" class="btn btn-primary mt-1 mb-1" ng-click="addWeather()">Add Weather</button>
 
-                </form>
-            </section>
+                    </form>
+                </section>
             </main>
             <footer>
                 <h3>{{company}} - {{author}}</h3>

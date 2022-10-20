@@ -10,7 +10,11 @@ app.controller('mainCtrl', function($scope){
     if ($scope.data == null) $scope.data == []
 
     $scope.addWeather = function(){
-        if($scope.newdata.)
+        if($scope.newdata.minimum == null || $scope.newdata.maximum == null || $scope.newdata.weather == null){
+            $scope.message = "Some data is either missing or invalid!"
+        }else{
+            $scope.data.push()
+        }
     }
     
 })
